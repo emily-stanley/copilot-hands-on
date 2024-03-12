@@ -31,3 +31,13 @@ def is_prime(n):
 
 # q: what does the function above do?
 # a: The function checks if a number is prime and returns True if it is and False if it is not
+
+
+# create a function do $ unit tests of the code above
+def test_is_prime():
+    assert is_prime(1) == False
+    assert is_prime(2) == True
+    assert is_prime(3) == True
+    assert is_prime(4) == False
+    assert is_prime(5) == True
+
