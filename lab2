@@ -1,6 +1,19 @@
 import math
 
 def is_prime(n):
+    """
+    Check if a number is prime.
+
+    A prime number (or a prime) is a natural number greater than 1 that is not a product 
+    of two smaller natural numbers. A natural number greater than 1 that is not prime is 
+    called a composite number. 
+
+    Parameters:
+    n (int): The number to check.
+
+    Returns:
+    bool: True if the number is prime, False otherwise.
+    """
     if n < 2:
         return False
     for i in range(2, math.isqrt(n) + 1):
@@ -8,3 +21,13 @@ def is_prime(n):
             return False
     return True
 
+#explain the code above line-by-line
+#is_prime function takes an integer n as its argument and returns a boolean value   
+#The first line of the function checks if the number is less than 2 and returns False if it is
+#The second line of the function iterates through the range of 2 to the square root of n + 1
+#The third line of the function checks if n is divisible by i and returns False if it is
+#The fourth line of the function returns True if the number is prime
+#The function returns False if the number is not prime
+
+# q: what does the function above do?
+# a: The function checks if a number is prime and returns True if it is and False if it is not
