@@ -1,0 +1,14 @@
+function splitURLandReturnComponents(url) {
+  var components = {};
+  var urlParts = url.split('?');
+  components['url'] = urlParts[0];
+  if (urlParts[1]) {
+    var queryString = urlParts[1];
+    var queryParts = queryString.split('&');
+    for (var i = 0; i < queryParts.length; i++) {
+      var keyValuePair = queryParts[i].split('=');
+      components[keyValuePair[0]] = keyValuePair[1];
+    }
+  }
+  return components;
+}
